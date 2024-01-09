@@ -27,11 +27,11 @@ jobs:
 
       - run: npm i
 
-      - name: Assume role using OIDC
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:oidc-provider/token.actions.githubusercontent.com
-          aws-region: ${{ vars.AWS_DEFAULT_REGION }}
+      # - name: Assume role using OIDC
+      #   uses: aws-actions/configure-aws-credentials@v2
+      #   with:
+      #     role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:oidc-provider/token.actions.githubusercontent.com
+      #     aws-region: ${{ vars.AWS_DEFAULT_REGION }}
 
       - run: npx cdk bootstrap
 
