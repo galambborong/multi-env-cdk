@@ -33,6 +33,6 @@ jobs:
       #     role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:oidc-provider/token.actions.githubusercontent.com
       #     aws-region: ${{ vars.AWS_DEFAULT_REGION }}
 
-      - run: npx cdk bootstrap
+      - run: npx cdk bootstrap -c config=env1
 
       - run: npx cdk deploy --require-approval never -c config=env1
