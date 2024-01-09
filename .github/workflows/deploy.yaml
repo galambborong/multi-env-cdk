@@ -27,7 +27,8 @@ jobs:
 
       - run: npm i
 
-      # - name: Assume role using OIDC # TODO 
+      # TODO - look into this a bit more
+      # - name: Assume role using OIDC 
       #   uses: aws-actions/configure-aws-credentials@v2
       #   with:
       #     role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:oidc-provider/token.actions.githubusercontent.com
