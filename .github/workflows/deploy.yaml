@@ -27,7 +27,7 @@ jobs:
 
       - run: npm i
 
-      # TODO - look into this a bit more
+      # TODO - look into this a bit more and more
       # - name: Assume role using OIDC 
       #   uses: aws-actions/configure-aws-credentials@v2
       #   with:
