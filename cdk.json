@@ -17,6 +17,14 @@
     ]
   },
   "context": {
+    "env1": {
+      "StackName": "ec2-stack",
+      "Environment": "pktest1"
+    },
+    "env2": {
+      "StackName": "ec2-stack",
+      "Environment": "pktest2"
+    },
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [

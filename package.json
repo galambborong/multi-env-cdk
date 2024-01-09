@@ -8,7 +8,13 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "cdk-deploy-env1": "tsc && cdk deploy \"*\" -c config=env1 --require-approval=never --progress=events",
+    "cdk-deploy-env2": "tsc && cdk deploy \"*\" -c config=env2 --require-approval=never --progress=events",
+    "cdk-diff-env1": "tsc && cdk diff \"*\" -c config=env1 --require-approval=never --progress=events",
+    "cdk-diff-env2": "tsc && cdk diff \"*\" -c config=env2 --require-approval=never --progress=events",
+    "cdk-destroy-env1": "tsc && cdk destroy \"*\" -c config=env1 --require-approval=never --progress=events",
+    "cdk-destroy-env2": "tsc && cdk destroy \"*\" -c config=env2 --require-approval=never --progress=events"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
