@@ -53,6 +53,11 @@ export class SampleEc2Stack extends cdk.Stack {
     );
 
     ec2Instance.addUserData(userDataScript);
+
+    new cdk.CfnOutput(this, 'ipAddress', {
+      value: ec2Instance.instancePublicIp,
+      description: 'Sample EC2 instance IP address'
+    });
   }
 }
 
