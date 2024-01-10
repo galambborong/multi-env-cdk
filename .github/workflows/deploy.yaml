@@ -14,11 +14,11 @@ jobs:
     name: Deploy to env1
     uses: ./.github/workflows/deployment-job.yaml
     with:
-      env: env1
+      environment: env1
 
   deploy_to_env2:
     needs: deploy_to_env1
     name: Deploy to env2
     uses: ./.github/workflows/deployment-job.yaml
     with:
-      env: env2
+      environment: env2
