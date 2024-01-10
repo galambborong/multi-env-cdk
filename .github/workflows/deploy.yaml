@@ -15,6 +15,7 @@ jobs:
     uses: ./.github/workflows/deployment-job.yaml
     with:
       environ: env1
+    secrets: inherit
 
   deploy_to_env2:
     needs: deploy_to_env1
@@ -22,3 +23,4 @@ jobs:
     uses: ./.github/workflows/deployment-job.yaml
     with:
       environ: env2
+    secrets: inherit
