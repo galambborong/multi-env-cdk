@@ -58,6 +58,12 @@ export class SampleEc2Stack extends cdk.Stack {
       value: ec2Instance.instancePublicIp,
       description: 'Sample EC2 instance IP address'
     });
+
+    new cdk.CfnOutput(this, 'accountDetails',
+    {
+      value: `${cdk.Aws.REGION}::${cdk.Aws.ACCOUNT_ID.substring(0, 3)}`,
+      description: "testing whether these get populated"
+    })
   }
 }
 

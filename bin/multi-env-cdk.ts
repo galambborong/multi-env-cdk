@@ -10,6 +10,9 @@ const { stackName, environment } = getConfig(app);
 cdk.Tags.of(app).add('app', stackName);
 cdk.Tags.of(app).add('env', environment);
 
+console.log(cdk.Aws.ACCOUNT_ID);
+console.log(cdk.Aws.REGION);
+
 const mainStackName = `${stackName}-${environment}`;
 
 new SampleEc2Stack(app, mainStackName, {
