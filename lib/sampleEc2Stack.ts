@@ -61,7 +61,7 @@ export class SampleEc2Stack extends cdk.Stack {
 
     new cdk.CfnOutput(this, 'accountDetails',
     {
-      value: `${cdk.Aws.REGION}::${cdk.Aws.ACCOUNT_ID.substring(0, 3)}`,
+      value: `${cdk.Aws.REGION}::${cdk.Aws.ACCOUNT_ID}`,
       description: "testing whether these get populated"
     })
   }
